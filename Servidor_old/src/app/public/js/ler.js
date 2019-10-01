@@ -44,7 +44,7 @@ function loadDoc() {
       document.querySelector("#lista3").innerHTML =texto;
     }
   };
-  xhttp.open("GET", "http://localhost:3300/inicio", true);
+  xhttp.open("GET", "http://localhost:3300/listar", true);
 
   console.log("dentro do loadDoc")
   xhttp.send();
@@ -57,12 +57,13 @@ function imprimeLista2(listaE){
 
   var itens, textoHtml, QtdItensArr, i;
 
-  itens=listaE;
-  QtdItensArr = itens.length;
+  itens=JSON.parse(listaE);
+
+  QtdItensArr = itens.Lista.length;
 
   textoHtml = "<ul>";
   for (i = 0; i < QtdItensArr; i++) {
-    textoHtml += "<li><a href='carousel.html'>" + itens[i] + "</a></li>";
+    textoHtml += "<li><a href='" + itens.Lista[i] + "'>" + itens.Lista[i] + "</a></li>";
   }
   textoHtml += "</ul>";
   

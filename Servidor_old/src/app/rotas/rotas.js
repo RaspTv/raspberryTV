@@ -4,7 +4,7 @@ const imprimeLista=require("../modules/caminho2");
 
 module.exports = (app) => {
      // roteamento para a chamada get para o servidor 
-  app.get("/inicio", function(req,res){
+  app.get("/listar", function(req,res){
      console.log("dentro do rotamento vou chamar o LerDir")
      //res.send(imprimeLista())
       res.send(lerDir());

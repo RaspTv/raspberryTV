@@ -16,7 +16,9 @@ function lerDir() {
     const ler2 = fs.readdirSync(pathh2);
     console.log("dentro dos caminhas " + ler2)
 
-    return  ler2;
+    
+    return  {Lista: ler2};
+    
 }
 
 module.exports= lerDir;

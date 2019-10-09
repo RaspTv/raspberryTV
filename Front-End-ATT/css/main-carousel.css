@@ -1,0 +1,111 @@
+html{
+overflow-y:hidden;
+overflow-x:hidden;
+}
+body{
+  width: 100%;
+  height: 100%;
+  margin: 0 auto;
+}
+main, .content{
+    margin: 0 auto;
+    width: 980px;
+    position: relative;
+}
+#setas{
+    display: flex;
+    flex-direction: column;
+    width: 2%;
+    position: absolute;
+    margin-top: -1%;
+}
+#cima{
+    display: none;
+    margin-top: 153%;
+}
+#baixo{
+    display: block;
+    margin-top: 45%;
+}
+#menu-principal{
+    display: none;
+    height: 60px;
+    width: 100%;
+    margin: 0;
+    top: 0;
+    left: 0;
+    background-color:#7385da;
+    
+}
+#header-1{
+    display: block;
+    margin: 0;
+    padding: 0;
+    margin-left: 24%;  
+}
+#logo{
+    display: block;
+    float: left;
+    padding: 13px;
+
+}
+#logo img{
+    max-width: 129px;
+    margin-left: -210%;
+}
+#barra-pesquisa{
+    position: absolute;
+    float: left;
+    top: 11px;
+    margin-left: 40%;
+}
+
+#barra-pesquisa input{
+    background-repeat: no-repeat;
+    background-position: 98%;
+    height: 25px;
+    width: 200%;
+    margin-top: 4px;
+    border: 1px solid #d6d6d6;
+    border-radius: 15px;
+}
+#botao-pesquisa{
+    background-image: url(../img/icone-search.png);
+    background-repeat: no-repeat;
+    background-position: 98%;
+    height: 52px;
+    left: 182%;
+    margin-top: -24%;
+    position: absolute;
+}
+#carousel {
+    
+    width: 50%;
+    height: 248px;
+    margin: auto;
+    background-size: 75%;
+    background-position: center;
+    background-repeat: no-repeat;
+    padding: 255px;
+}
+#esquerda {
+    float: left;
+    position: absolute;
+    top: 90px;
+    left: 120px;
+}
+
+#direita{
+    float: right;
+    position: absolute;
+    top: 90px;
+    right: 120px;
+}
+
+button{
+    width: 25px;
+    height: 51px;
+    font-weight: 800;
+    border: none;
+    background-color: transparent;
+}

@@ -6,8 +6,10 @@ function loadDoc(path) {
   
     xhttp.onreadystatechange = function() {
       if (this.readyState == 4 && this.status == 200) {
-        texto=imprimeLista(path,this.response)
-        document.querySelector("body").innerHTML =texto;
+        //texto=imprimeLista(path,this.response)
+        imprimeLista(path,this.response)
+        //document.querySelector("#lista").innerHTML =texto;
+       
       }
     };
     xhttp.open("GET", "http://localhost:3300/"+path, true,);

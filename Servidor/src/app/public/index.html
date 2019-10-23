@@ -3,25 +3,42 @@
 
 <head>
     <meta charset="UTF-8">
-    <title>index</title>
-    <link rel="stylesheet" href="css/main-index.css">
-    <script type="text/javascript" src="js/main-index.js" defer></script>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./css/index.css">
+    <script type="text/javascript" src="./js/imprime.js"></script>
+    <script type="text/javascript" src="./js/requisicao.js"></script>
+    <script type="text/javascript" src="./js/callSlider.js"></script>
+    <title>listagem de documentos</title>
 </head>
 
 <body>
-    <div id="menu">
+    <header id="menu-principal">
         <main>
-            <div id="logo">
-                <img src="img/logo.png">
-            </div>
-            <div id="barra-pesquisa">
-                                
-                <input type="text" placeholder="Pesquisa por uma pasta aqui">
-            
 
+            <div id="header-1">
+                <div id="logo">
+                    <img src="img/logoFocus.png" id="img" onclick="redirecionar()">
+                </div>
+                <div id="barra-pesquisa">
+                    <input placeholder="Pesquisar" id="input">
+                    <button id="botao-pesquisa" onclick="cliquePesquisa()"></button>
+                </div>
             </div>
+
         </main>
+    </header>
+
+    <div id="fundo">
+       
+     <h2> Selecione uma Pasta de imagens para apresentação</h2>
+        
+
+        <div id="lista" class="containerFlex">
+            <button type="submit" onclick="loadDoc('public/documentos/')">Listar</button>
+        </div>
+
     </div>
+
 </body>
 
 </html>

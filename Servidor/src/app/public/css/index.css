@@ -1,40 +1,33 @@
+
 html{
-overflow-y:hidden;
+overflow-y:scroll;
 overflow-x:hidden;
 }
 body{
-  width: 100%;
-  height: 100%;
-  margin: 0 auto;
+    width: 100%;
+    height: 100%;
+    margin: 0 auto;
 }
-main, .content{
+main{
     margin: 0 auto;
     width: 980px;
-    position: relative;
+    /* position: relative; */
 }
-#setas{
-    display: flex;
-    flex-direction: column;
-    width: 2%;
-    position: absolute;
-    margin-top: -1%;
+
+h2{
+    margin-top: 0px;
+    margin:0px;
+    margin-bottom: 10px;
 }
-#cima{
-    display: none;
-    margin-top: 153%;
-}
-#baixo{
-    display: block;
-    margin-top: 45%;
-}
+
 #menu-principal{
-    display: none;
+    display: block;
     height: 60px;
     width: 100%;
     margin: 0;
     top: 0;
     left: 0;
-    background-color:black;
+    background-color:#2326ba;
     
 }
 #header-1{
@@ -77,35 +70,28 @@ main, .content{
     left: 182%;
     margin-top: -24%;
     position: absolute;
-}
-#carousel {
-    
-    width: 50%;
-    height: 248px;
-    margin: auto;
-    background-size: 75%;
-    background-position: center;
-    background-repeat: no-repeat;
-    padding: 255px;
-}
-#esquerda {
-    float: left;
-    position: absolute;
-    top: 90px;
-    left: 120px;
-}
-
-#direita{
-    float: right;
-    position: absolute;
-    top: 90px;
-    right: 120px;
-}
-
-button{
+    background-color: transparent;
     width: 25px;
     height: 51px;
-    font-weight: 800;
     border: none;
-    background-color: transparent;
+
+}
+button{
+
+    font-weight: 800;
+
+}
+#lii{
+    cursor: pointer;
+}
+#fundo{
+    
+    background-image: url(../img/polimeros3.jpg); 
+    background-attachment: fixed;
+    background-repeat: no-repeat;  
+    width: 1200px;
+    min-height: 800px;
+    height: max-content;
+    border:solid;
+    border: groove;
 }

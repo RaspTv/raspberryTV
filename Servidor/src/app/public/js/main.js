@@ -39,7 +39,8 @@ function preCarregamento() {
 function carregarImg(img) {
     slider.style.backgroundImage = "url('" + imgs[img].src + "')";
 }
-/* Inicia o carousel para o usuario, e através deste function podemos atribuir o tempo em que este carousel passará de forma automatica. */
+/* Inicia o carousel para o usuario, e através deste function podemos atribuir o tempo em que este 
+carousel passará de forma automatica. */
 function iniciar() {
     preCarregamento();
     imgAtual = 0;

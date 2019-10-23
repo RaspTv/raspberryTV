@@ -1,37 +1,41 @@
-
-/* Realiza a troca do estilo do display "none" para o "block" ao passar o mouse sobre uma determinada area. */
 function mostrar() {
-    if (document.getElementById('header-1').style.display = 'none') {
+    if ('baixo'.clicked = true) {
+        document.getElementById('menu-principal').style.display = 'block';
         document.getElementById('header-1').style.display = 'block';
-        document.getElementById('menu-principal').style.backgroundColor = '#7385da';
+        document.getElementById('menu-principal').style.backgroundColor = '#2326ba';
+        document.getElementById('barra-pesquisa').style.display = 'block';
+        document.getElementById('baixo').style.display = 'none';
+        document.getElementById('cima').style.display = 'block';
     }
 }
-/* Realiza a troca do estilo do display "block" para o "none" ao retirar o mouse sobre uma determinada area. */
 function esconder() {
-    if (document.getElementById('header-1').style.display = 'block') {
+    if ('cima'.clicked = true) {
+        document.getElementById('menu-principal').style.display = 'none';
         document.getElementById('header-1').style.display = 'none';
         document.getElementById('menu-principal').style.backgroundColor = '#ffffff';
-        /* Tira o foco da pesquisa. */
-        document.getElementById('pesquisa').blur();
-
         document.getElementById('barra-pesquisa').style.display = 'none';
-    }
+        document.getElementById('cima').style.display = 'none';
+        document.getElementById('baixo').style.display = 'block';
 
-}/* Se o houver o clique em cima da logo, realiza a abertura da barra de pesquisa. */
-function mostrarbarra() {
-    if ('img'.clicked = true) {
-        document.getElementById('barra-pesquisa').style.display = 'block';
-        /* coloca o foco na pesquisa. */
-        document.getElementById('pesquisa').focus();
     }
 }
 /* Ao clicar redireciona para outro destino.*/
 function redirecionar() {
     if ('retorna'.clicked = true) {
-        window.location.href = "pagina2";
+        window.location.href = "index.html";
     }
 }
+/* Ao clicar no botao da pesquisa, esta função pega o que estiver dentro da pesquisa e armazena dentro de uma variavel */
+function cliquePesquisa() {
 
+    if ('botao-pesquisa'.clicked = true) {
+        var ValorInput = document.getElementById('input').value;
+        console.log(ValorInput);
+
+    }
+}
+//---------------------------------------------------------
+//carrousel
 
 /*Variaveis do Carousel. */
 var imgs = [];
@@ -39,29 +43,36 @@ var slider;
 var imgAtual;
 var maxImg;
 var tmp;
-
+var path1=sessionStorage.getItem("lista");
+var tamanho=sessionStorage.getItem("tamanho")
 
 
 /* Realiza a leitura de dentro da pasta imgs*/
 function preCarregamento() {
     var p = 1;
-    for (var i = 0; i < 30; i++) {
+    for (var i = 0; i < tamanho; i++) {
         imgs[i] = new Image();
         if (i <= 9) {
-            imgs[i].src = "imgs/A_page-00" + p + ".jpg";
+            imgs[i].src = path1+"A_page-00" + p + ".jpg";
+            
         }
         else {
 
-            imgs[i].src = "imgs/A_page-00" + p + ".jpg";
+            imgs[i].src = path1+"A_page-00" + p + ".jpg";
+           
         }
 
         p++;
     }
 }
+
 function carregarImg(img) {
+
     slider.style.backgroundImage = "url('" + imgs[img].src + "')";
 }
-/* Inicia o carousel para o usuario, e através deste function podemos atribuir o tempo em que este carousel passará de forma automatica. */
+/* Inicia o carousel para o usuario, e através deste function podemos atribuir 
+o tempo em que este carousel passará de forma automatica. */
+
 function iniciar() {
     preCarregamento();
     imgAtual = 0;

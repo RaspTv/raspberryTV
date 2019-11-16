@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <link href="https://fonts.googleapis.com/css?family=Roboto&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="./css/main-carousel.css">
+    <script type="text/javascript" defer src="js/pdf/build/pdf.js"></script>
+    <script type="text/javascript" src="js/testePdf.js" defer></script>
+    <script type="text/javascript" src="js/main-carousel.js" defer></script>
+    <meta charset="UTF-8">
+    <title>Slides</title>
+</head>
+
+<body>
+    <div id="setas">
+        <img src="img/up-arrow_icon-icons.com_69828.png" id="cima" onclick="esconder()">
+        <img src="img/down-arrow-2_icon-icons.com_70191.png" id="baixo" onclick="mostrar()">
+    </div>
+    <header id="menu-principal">
+        <main>
+
+            <div id="header-1">
+                <div id="logo">
+                    <img src="./img/logoFocus.png" id="img" onclick="redirecionar()">
+                </div>
+                <div id="barra-pesquisa">
+                    <input placeholder="Pesquisar" id="input">
+                    <button id="botao-pesquisa" onclick="cliquePesquisa()"></button>
+                </div>
+            </div>
+
+        </main>
+    </header>
+        <div id="carousel">
+            <!-- <canvas id="canvas" width="1920" height="1080"></canvas> -->
+            <button id="esquerda" onclick="prevPage()"> ESQ
+            </button>
+            <button id="direita" onclick=" nextPage()"> DIR
+            </button>
+        </div>
+    </div>
+</body>
+
+</html>

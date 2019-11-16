@@ -79,15 +79,16 @@ main, .content{
     position: absolute;
 }
 #carousel {
-    
-    width: 50%;
-    height: 248px;
-    margin: auto;
-    background-size: 75%;
-    background-position: center;
-    background-repeat: no-repeat;
-    padding: 255px;
+    /* overflow: hidden; */
+    width: 100vw;
+    /* height: 248px; */
+    height:100vh;
+    margin: 0 auto;
+    /* background-position: center; */
+    /* background-repeat: no-repeat; */
+    /* padding: 255px; */
 }
+
 #esquerda {
     float: left;
     position: absolute;
@@ -109,3 +110,19 @@ button{
     border: none;
     background-color: transparent;
 }
+
+#canvas{
+    /* position: absolute;
+    margin: 0 auto;
+    padding: 0 auto;
+    padding-left: 33%; 
+    top: 0;*/
+    /* display: block; */
+    /* position: absolute; */
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    width: 1920;
+    height: 1080;
+}   

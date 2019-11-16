@@ -48,6 +48,7 @@ var tamanho=sessionStorage.getItem("tamanho")
 
 
 /* Realiza a leitura de dentro da pasta imgs*/
+/*
 function preCarregamento() {
     var p = 1;
     for (var i = 0; i < tamanho; i++) {
@@ -70,8 +71,10 @@ function carregarImg(img) {
 
     slider.style.backgroundImage = "url('" + imgs[img].src + "')";
 }
-/* Inicia o carousel para o usuario, e através deste function podemos atribuir 
-o tempo em que este carousel passará de forma automatica. */
+
+
+// Inicia o carousel para o usuario, e através deste function podemos atribuir 
+//o tempo em que este carousel passará de forma automatica.
 
 function iniciar() {
     preCarregamento();
@@ -82,7 +85,7 @@ function iniciar() {
     TempoTroca = 7000;
     tmp = setInterval(troca1, TempoTroca);
 }
-/* Realiza a troca da imagem, se estiver na imagem 01 ele passará para a 02. */
+// Realiza a troca da imagem, se estiver na imagem 01 ele passará para a 02. 
 function troca1() {
     imgAtual++;
     if (imgAtual > maxImg) {
@@ -90,7 +93,7 @@ function troca1() {
     }
     carregarImg(imgAtual);
 }
-/* Realiza a troca da imagem, se estiver na imagem 02 ele passará para a 01.*/
+//Realiza a troca da imagem, se estiver na imagem 02 ele passará para a 01.
 function troca2() {
     imgAtual--;
     if (imgAtual > maxImg) {
@@ -98,16 +101,19 @@ function troca2() {
     }
     carregarImg(imgAtual);
 }
-window.addEventListener("load", iniciar);
+*/
+//window.addEventListener("load", iniciar);
 
 /* Realiza a troca da imagem através da tecla 04 do teclado numerico. */
 document.addEventListener("keydown", function (event) {
     var tecla = event.keyCode;
-    if (tecla == 102) {
-        troca1();
+    var tecla2 = event.key;
+    console.log(tecla,tecla2)
+    if (tecla == 102 || tecla == 54) {
+        nextPage();
     }
     /* Se não... Realiza a troca da imagem através da tecla 06 do teclado numerico. */
-    else if (tecla == 100) {
-        troca2();
+    else if (tecla == 100 || tecla == 52) {
+        prevPage();
     }
 });
